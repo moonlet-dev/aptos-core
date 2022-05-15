@@ -7,7 +7,9 @@ import { HexString } from "./hex_string";
 
 import { NODE_URL, FAUCET_URL } from "./util.test";
 
-test(
+// Skips this test for now due to breaking changes with TestCoin migration.
+// TODO: Make this test work with local network (instead of devnet).
+test.skip(
   "full tutorial faucet flow",
   async () => {
     const client = new AptosClient(NODE_URL);
